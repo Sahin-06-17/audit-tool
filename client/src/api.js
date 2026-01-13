@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/subs'; 
+const API_URL =  'https://audit-tool-as6f.onrender.com'; 
 
 // REMOVED THE HARDCODED USER CONSTANTS
 
@@ -32,6 +32,7 @@ export const deleteSub = async (id) => {
   const res = await axios.delete(`${API_URL}/${id}`);
   return res.data;
 };
+
 
 export const sendTestEmail = async (email) => {
   const res = await axios.post('http://localhost:5000/api/test-email', { email });

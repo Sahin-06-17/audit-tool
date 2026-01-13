@@ -34,7 +34,3 @@ export const deleteSub = async (id) => {
 };
 
 
-export const sendTestEmail = async (email) => {
-  const res = await axios.post('http://localhost:5000/api/test-email', { email });
-  return res.data;
-};

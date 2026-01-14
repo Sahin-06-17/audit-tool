@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Trash2, PauseCircle, PlayCircle, AlertCircle, X } from 'lucide-react';
 import { SignedIn, SignedOut, SignInButton, UserButton, useUser } from "@clerk/clerk-react";
-import { getSubs, addSub, toggleSub, deleteSub, sendTestEmail } from './api'; 
+import { getSubs, addSub, toggleSub, deleteSub } from './api'; 
 
 const TEMPLATES = [
   { name: 'Netflix', cost: 15.49, category: 'Entertainment' },
@@ -122,7 +122,6 @@ const App = () => {
              <div className="flex justify-between items-start mb-4">
                 <div className="flex items-center gap-2">
                     <span className="text-indigo-100 font-medium text-xs uppercase tracking-wider">Monthly Burn</span>
-                    <button onClick={handleTestEmail} className="text-[10px] bg-white/10 px-2 py-0.5 rounded border border-white/10">Test Email</button>
                 </div>
                 <span className="bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold">{subs.filter(s => s.active).length} Active</span>
              </div>

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL =  'https://audit-tool-as6f.onrender.com'; 
+const API_URL = 'https://audit-tool-as6f.onrender.com/api/subs';
 
 // REMOVED THE HARDCODED USER CONSTANTS
 
